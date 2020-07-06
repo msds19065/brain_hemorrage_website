@@ -1,61 +1,431 @@
 <!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+<html lang="en">
 
-.bgimg {
-  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Brain Hemorrhage Diagnosis - Deep Learning PSemester Project</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.jfif">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="js/modernizr.js"></script>
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
 <body>
 
-<div class="bgimg">
-  <div class="topleft">
-    <p>Brain Hemorrhage Detection</p>
-  </div>
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-    <p>3 hours left</p>
-  </div>
-  <div class="bottomleft">
-  </div>
-</div>
+    <!-- ====================================================
+	header section -->
+    <header class="top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5 header-logo">
+                    <br>
+                    <a href="index.html"><img src="img/logo_2.jfif" alt="" class="img-responsive logo" style="width: 209px; height: 94px;"></a>
+                </div>
 
+                <div class="col-md-6">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid nav-bar">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a class="menu" href="#abstract" style='font-size: 21px;'>Abstract</a></li>
+                                    <li><a class="menu" href="#introduction" style='font-size: 21px;'>Intro</a></li>
+                                    <li><a class="menu" href="#dataset" style='font-size: 21px;'>Dataset</a></li>
+                                    <li><a class="menu" href="#report" style='font-size: 21px;'>Our Solutions</a></li>
+                                    <li><a class="menu" href="#results" style='font-size: 21px;'>Results</a></li>
+                                </ul>
+                            </div>
+                            <!-- /navbar-collapse -->
+                        </div>
+                        <!-- / .container-fluid -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end of header area -->
+
+    <section class="slider" id="home_ignore">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="carouselHacked" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="header-backup"></div>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/poster.jpg" alt="" style="width: 100%; height:
+									800px;">
+                            <div class="carousel-caption">
+                                <h1 style="font-size: 110px;">Brain Hemorrhage Detection</h1>
+                                <p>A plugable Cloud-powered Deep Learning solution delivered via an AWS Pipeline</p>
+                                <!-- <button>learn more</button> -->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="img/poster 1.jpg" alt="" style="width: 100%; height:
+									800px;">
+                            <div class="carousel-caption">
+                                <h1 style="font-size: 110px;">Brain Hemorrhage Detection</h1>
+                                <p>A plugable Cloud-powered Deep Learning solution delivered via an AWS Pipeline</p>
+                                <!-- <button>learn more</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carouselHacked" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carouselHacked" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of slider section -->
+
+    <!-- abstract section -->
+    <section class="about text-center" id="abstract">
+        <div class="container">
+            <div class="row">
+                <h2 style='margin-top: 50px !important;'>Abstract</h2>
+                <div class="col-lg-6">
+                    <div class="single-about-detail">
+                        <div class="about-details" id="abstract-left-div" style="padding: 1cm;">
+                            <p style="text-align: justify;">
+                                In the emergency cases, Head CT Scans are used to determine the Triage process for strokes. Presently, human resources are manually probing Head CT Scans to perform the diagnosis. And sometimes due to their unavailability, such as in remote areas, deaths
+                                occur. To remove this dependency, we've introduced a Cloud-powered Deep Learning based robotic agent that can readily be deployed in medical facilities to automate this initial screening stage where a diagnosis has to be
+                                made to determine the type of Brain Hemorrhage. A Cloud Pipeline on AWS has been established that takes a new case of Head CT Scan as an input in the form of an image, passes it to the first Deep Learning model that classifies
+                                the type of Brain Hemorrhage and then forwards that image to a segmentation model which localizes the bleeding portion. The prediction results are stored in a database as well as visually plotted on AWS QuickSight that
+                                provides insights in the form of statistical analytics. On average, the classification models have achieved ~70% accuracy so far and the segmentation model has achieved a DICE coefficient value of ~60%. This plug-able system
+                                essentially provides a skeleton that can be filled to the need with more sophisticated blocks, say Deep Learning models, and fastened to an easy-to-use interface that medical personnel can operate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Put image here -->
+                <div class="col-lg-6">
+                    <img src="img/abstract.PNG" alt="">
+                </div>
+            </div>
+    </section>
+    <!-- end of abstract section -->
+
+
+
+    <!-- intro section -->
+    <section class="about text-center" id="introduction">
+        <div class="container">
+            <div class="row">
+                <h2 style='margin-top: 50px !important;'>Introduction</h2>
+            </div>
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" id="intro-div">
+                        <p style="text-align: justify;">
+                            Brain hemorrhage was first distinguished from strokes due to insufficient blood flow, so-called ”leaks and plugs”, in 1823. Various reasons can cause a brain hemorrhage such as brain tumor and brain trauma but the most likely one is high blood pressure.
+                            Around 1.5 million people die from hemorrhage around the globe every year. Head CT scans are among the most commonly used emergency room diagnostic tools while initial screening and as the first-line diagnostic modality. A
+                            human diagnostician studies the scans and establishes the triage which determines the degree of urgency to decide the order of treatment. Sometimes in the absence of a diagnostician, this triage process is impeded and timely
+                            order of treatment is not determined which leads to deaths. Human accuracy in diagnosis is closer to 95% while AI agents are also faring well with 94%. It validates for us that human resources at such stages can be replaced
+                            with robotic agents which may take care of this initial screening that won’t face any shortcoming in the precision with which it determines the triage. Further, instead of tailoring such a solution for a specific organization,
+                            a standardized Cloud-based solution can be deployed and made available to all which may be easily plugged at such stages that can be automated. This project proposes a cloud-based solution that makes use of Deep Learning techniques
+                            to engineer such a robotic agent that will be streamlining the Head CT scan interpretation workflow by automating the initial screening and triage process. It will be deployed on a cloud assembly that will make it a ready-to-use
+                            solution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of intro section -->
+
+
+    <!-- dataset starts here -->
+    <section class="about text-center" id="dataset" style="margin-top: 40px;">
+        <div class="container">
+            <div class="row">
+                <h2 style='margin-top: 50px !important;'>Dataset</h2>
+            </div>
+            <div class="col-lg-6">
+                <div class="single-about-detail">
+                    <div class="about-details" id="dataset-left">
+                        <p style="text-align: justify;">
+                            We used the dataset of CQ500. The dataset is read by three highly experienced radiologists and labeled each scan with the respective label. The dataset contains 193,317 CT scans of 491 patients.
+                        </p>>
+
+                        <img src="img/data.PNG" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="single-about-detail">
+
+                    <img src="img/intracranial.gif" class="img-responsive" style="height:
+								628px" />
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" id="dataset-left">
+                        <h3>Data Augmentation</h3>
+                        <p style="padding-bottom: 10px">
+                            We are using data augmentation techniques to significantly increase the diversity of data available for training models to improve results and avoid overfitting. Following are the techniques that we are using for data augmentation
+                        </p>
+                        <img src='img/Augmentation.jpeg' style='height:auto; width=auto;' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of service section -->
+
+
+    <!-- Dataset section -->
+    <section class="about text-center" id="report">
+        <div class="container">
+            <div class="row">
+                <h2 style='margin-top: 50px !important;'>Our Solutions</h2>
+            </div>
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" id="report-upper-div">
+                        <p style="text-align: justify;">
+                            The intended outcome of this project was to build a ready-to-use robotic agent that can take a CT Scan of a brain as input and first detect the type of brain hemorrhage and then segment out the affected area by localizing. First, we assembled different
+                            amazon services to perform various administrative tasks such as delivering the new case (image) to the Deep Learning model via a storage and eventually developing insights in the form of Analytics. Second, we trained multiple
+                            neural networks on the collected dataset and selected the one with the best accuracy. And then we embedded the selected model in our pipeline for classification as well as segmentation tasks.
+
+                            <!-- For this project, we concatenate various amazon services with a deep learning model embedded to develop a pipeline with a starting and ending point, which can be deployed and used without any complications. A Neural Network is trained using Transfer Learning
+                            technique to develop a Classification agent capable of detecting brain hemorrhage in CT scans. Employ a tech assembly on AWS Cloud to map this agent on a pipeline of AWS services so that when it is fed with a new case, it may
+                            be able to pass it through the pipeline to extract, transform, load and eventually detect. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" style="padding: 1cm 1cm 1px; background: white;">
+                        <h3 style="font-weight: bolder;color: black; font-size:60px;">Training Phase</h3>
+                        <p style="text-align: justify; color: black;">
+
+                            In the Training Phase, we trained two types of models for two separate jobs. For the the first part we trained four neural networks using Transfer Learning for classification, which would classify the type of brain hemorrhage from the given Head CT Scan. 
+                            And for the second part we trained a U-Net model for image segmentation to extract the effected area of the brain from the CT scan.
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-12">
+                <div class="single-about-detail" style="background-color: black;">
+                    <div class="about-details" style="padding: 1cm 1cm 1px;background-color: white;">
+                        <h3 style="color: black;">Classification</h3>
+                        <p style="text-align: justify; color: black;">
+
+                            For classification purpose, we trained different neural networks to compare results and choose the best out of them. The neural networks we trained are VGG16, ResNet50, DenseNet169 and MobileNet-V2.
+                            To serve our purpose we used the pre-trained weights from ImageNet. We also appended custom fully connected (FC) layers at the end of each architecture to drive the model towards an optimality for our domain.
+
+                        </p>
+
+
+                        <ul style="color: black; text-align: left;">
+                            <li>
+                                <h4 style="color: black; margin-bottom: 0px;">VGG-16:</h4>
+                                <p style="text-align: justify; padding-bottom: 0px;color: black;">
+                                    This network was introduced in 2014 in Large Scale Visual Recognition Challenge 2014 (ILSVRC2014). It was an improvement over AlexNet by replacing kernel size of 11 and 5 with multiple 3X3 kernel sized filters. For our purpose we are not freezing any
+                                    layer in this network for better training of the model. With that we are adding 4 Dense layers followed by activation function of Relu and for the last layer we used sigmoid function to get the classification probability
+                                    for each label.
+                                </p>
+                            </li>
+                            <li>
+                                <h4 style="color: black; margin-bottom: 0px;">ResNet-50:</h4>
+                                <p style="text-align: justify;  padding-bottom: 0px;color: black;">
+                                    This network was introduced in 2015 in Large Scale Visual Recognition Challenge 2015 (ILSVRC2015) where it secured 1st position with an error rate of 3.57%. It uses identity mapping to get the best accuracy from training. In our case we used the pre-trained
+                                    weights from ImageNet initially and then trained the model on our dataset for better accuracy. We followed the same configuration in this case as we used in the previous network.
+                                </p>
+                            </li>
+                            <li>
+                                <h4 style="color: black; margin-bottom: 0px;">MobileNet-V2:</h4>
+                                <p style="text-align: justify;  padding-bottom: 0px; color: black;">
+                                    This network was published in 2018 by Google. In MobileNetV2, there are two types of blocks. One is residual block with stride of 1. Another one is block with stride of 2 for downsizing.There are 3 layers for both types of blocks.The first layer is 1×1
+                                    convolution with ReLU6. The second layer is the depthwise convolution.The third layer is another 1×1 convolution but without any non-linearity.
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4 style="color: black; margin-bottom: 0px;">DenseNet-169:</h4>
+                                <p style="text-align: justify; color: black;">
+                                    This network was published in 2017, it introduced DenseBlock, an improvment over ResNet. In DenseNet, each layer obtains additional inputs from all preceding layers and passes on its own feature-maps to all subsequent layers. Concatenation is used. Each
+                                    layer is receiving a “collective knowledge” from all preceding layers.
+
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" style="padding: 1cm 1cm 1px;background-color: white;">
+                        <h3 style="color: black;">Image Segementation</h3>
+                        <p style="text-align: justify; color:black">
+
+                            To segment out the effected area of the brain we followed U-Net architecture as the base motivation for a custom architecture. We experimented with various configurations of encoder-decoder pairs and came up with the following tailored architecture that has 4 encoder-decoder pairs with a Bottle Neck layer.
+                        </p>
+                        <figure>
+                            <img src="img/custom_unet.PNG" class="img-responsive,center" style="padding-bottom: .3cm;" />
+                            <figcaption style="font-size: 25px;color: white;">Custom UNet
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" style="padding: 1cm; background: transparent;">
+                        <h3 style="font-weight: bolder;color: black; font-size:60px;">Production Phase</h3>
+                        <p style="text-align: justify; color: black;">
+                            The pipeline we developed to accomplish our goal contains various components from AWS. For each operation, we chose a different service. A rough idea about the services we used and the sequence of these services in our pipeline can be observed from the
+                            given snippet. The very first components is EC2. this provides a complete control over compute resources. With this help user can input an unseen sample into the system for predictions. S3 is used to store big amount of data.
+                            We used this to store our training and validation data to train the model. Lambda service is used to trigger routines upon new data arrival. SageMaker is an Amazon provided ML platform which provides helping tools to train
+                            build and deploy our Deep Learning models. This component is used to store the output generated from the model after passing the testing case
+
+                        </p>
+                        <img src="img/pipeline.PNG" style="margin-left: -25px;" />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- end of Report Section -->
+
+    <section class="about text-center" id="results">
+        <div class="container">
+            <div class="row">
+                <h2>Results</h2>
+            </div>
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" id="result-description">
+                        <h3>Classification</h3>
+
+                        <p style="text-align: justify;">
+                            VGG-16 and MobileNet-V2 both performed fairly on the test dataset, DenseNet-169 Performed a little better than MobileNet-V2 and VGG-16 with accuracy upto 60% but ResNet-50 outperformed all three model in terms of accuracy. Here are the stats for all four
+                            models. For VGG16 model, the best accuracy we achieved on testing data is 50%. For ResNet101 model, the best accuracy we achieved on test data is 70%. For MobileNet-V2 model, the best accuracy we achieved on test data is 58%.
+                            And for the DenseNet-169 we were able to get accuracy upto 58% on testing data. Accuracy graphs for all four models are given below
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/vggtrain.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/resnettrain.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/densenettrain.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/mobilenettrain.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/vggtest.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/resnettest.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/mobilenettest.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+                <div class="col-lg-3">
+                    <img src="img/densenettest.png" class="img-responsive" style="width: 300px; height: 170px;" />
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="single-about-detail">
+                    <div class="about-details" id="result-description">
+                        <h3>Image Segmentation</h3>
+                        <p style="text-align: justify;">
+                            For segmentation, we draw the DICE Coefficient graph to report the performance of our network on test dataset. DICE Coefficient graph is used to measure the overlapping of ground truth pixels and predicted pixels to judge the performance of algorithm on multiple datasets. The labels on y-axis represent dataset of brain hemorrhage from various research institute studied by experienced researchers and the x-axis labels represent the Dice values.
+                        </p>
+                        <div class="col-lg-6">
+                            <figure>
+                                <img src="img/unet.png" class="img-responsive" />
+                                <figcaption style="font-size: 25px;">Dice Coefficient</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-6" style="padding-top: 4.5%;">
+                            <figure>
+                                <img src="img/Picture7.png" class="img-responsive" />
+                                <figcaption style="font-size: 25px;padding-top: 38px;">Image Segmentation Results</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- footer starts here -->
+    <footer class="footer clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 footer-para">
+                    <p>&copy;Information Technology University, Lahore</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- script tags
+	============================================================= -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/gmaps.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
+
 </html>
